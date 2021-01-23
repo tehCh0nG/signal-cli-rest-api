@@ -100,4 +100,4 @@ EXPOSE ${PORT}
 ENTRYPOINT ["/entrypoint.sh"]
 
 HEALTHCHECK --interval=20s --timeout=10s --retries=3 \
-    CMD curl -f http://localhost:${PORT}/v1/health || exit 1
+    CMD curl -f http://0.0.0.0:${PORT}/v1/health || exit 1
